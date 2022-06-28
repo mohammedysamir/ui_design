@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 class InputField extends StatelessWidget {
   final String label, hint;
@@ -30,24 +31,40 @@ class InputField extends StatelessWidget {
             style: const TextStyle(fontSize: 16, color: Colors.black),
           ),
         ),
-        TextFormField(
-          obscureText: isPassword,
-          textAlign: TextAlign.left,
-          controller: myController,
-          onChanged: (text) {
-            input = text;
-          },
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return "can't submit empty data";
-            }
-            return null;
-          },
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(),
-            hintText: hint,
-          ),
-        )
+        //check if field is Phone field or not
+        if (isPhone)
+          IntlPhoneField(
+            initialCountryCode: 'EG',
+            onChanged: (phone) {
+              print("phone number is:${phone.completeNumber}");
+            },
+            decoration: InputDecoration(
+                labelText: label,
+                border: const OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Color.fromARGB(255, 81, 175, 171)))),
+          )
+        else //is not phone
+          TextFormField(
+            obscureText: isPassword,
+            textAlign: TextAlign.left,
+            controller: myController,
+            onChanged: (text) {
+              input = text;
+            },
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "can't submit empty data";
+              }
+              return null;
+            },
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(255, 81, 175, 171))),
+              hintText: hint,
+            ),
+          )
       ],
     );
   }
