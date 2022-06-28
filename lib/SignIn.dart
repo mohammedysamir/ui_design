@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/RegisterScreen.dart';
 
-import 'InputField.dart';
-import 'MainButton.dart';
-import 'SecondaryButton.dart';
+import 'Utility_classes/InputField.dart';
+import '/Utility_classes/MainButton.dart';
+import '/Utility_classes/SecondaryButton.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);

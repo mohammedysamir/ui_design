@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/MainButton.dart';
-import 'package:ui_design/SecondaryButton.dart';
-import 'InputField.dart';
+import 'package:ui_design/Utility_classes/MainButton.dart';
+import 'package:ui_design/Utility_classes/SecondaryButton.dart';
+import 'Utility_classes/InputField.dart';
 import 'SignIn.dart';
 
 class RegisterScreen extends StatelessWidget {
