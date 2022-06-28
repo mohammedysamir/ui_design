@@ -45,4 +45,3 @@ class OnBoardingSlide extends StatelessWidget {
     );
   }
 }
-//todo: add slider to onBoardingSlide with Gesture detector and state changer

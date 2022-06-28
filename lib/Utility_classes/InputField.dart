@@ -69,4 +69,3 @@ class InputField extends StatelessWidget {
     );
   }
 }
-//todo: handle phone number
