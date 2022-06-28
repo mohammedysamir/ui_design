@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MainButton extends StatelessWidget {
   final String text;
-  final Function onPressed;
+  final Function() onPressed;
 
   const MainButton({Key? key, required this.text, required this.onPressed})
       : super(key: key);
@@ -15,9 +15,7 @@ class MainButton extends StatelessWidget {
           width: double.infinity,
           height: 55,
           child: ElevatedButton(
-            onPressed: () {
-              onPressed;
-            },
+            onPressed: onPressed,
             style: ButtonStyle(
                 // foregroundColor: MaterialStateProperty.all(Colors.white),
                 backgroundColor: MaterialStateProperty.all(
