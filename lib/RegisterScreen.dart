@@ -27,6 +27,7 @@ class RegisterScreen extends StatelessWidget {
           isPhone: false),
     ];
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         color: Colors.white,
         child: Column(
