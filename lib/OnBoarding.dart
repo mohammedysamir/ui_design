@@ -1,6 +1,8 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ui_design/Utility_classes/MainButton.dart';
+
 import '/Utility_classes/OnBoardingSlide.dart';
 import 'HomePage.dart';
 import 'RegisterScreen.dart';
@@ -28,6 +30,11 @@ class _OnBoardingState extends State<OnBoarding> {
         mainText: "Buy any food from your favorite restaurant",
         secondaryText:
             "We are consistently adding your favorite restaurant throughout the territory and around your area carefully selected"),
+    OnBoardingSlide(
+        image: Image.asset("assets/images/discount.jpg"),
+        mainText: "Exclusive Discounts",
+        secondaryText:
+            "Enjoy our exclusive discounts using promo-codes, more food less money paid = more happiness"),
   ];
 
   @override
